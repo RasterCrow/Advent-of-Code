@@ -1,5 +1,5 @@
 #read lines from file
-f = open("input.txt", "r")
+f = open("2.txt", "r")
 lines = f.read().splitlines() 
 f.close()
 
@@ -14,7 +14,6 @@ def part1():
         letter=lines[line].split()[1].split(':')[0]
         password = lines[line].split()[2]
         #check if correct
-
         count=0
         for pswLetter in list(password):
            
