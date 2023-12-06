@@ -73,10 +73,9 @@ const solve = (data) => {
             array[lineIndex][charIndex]
         : array[lineIndex][charIndex] +
             hasNumber(array, lineIndex, charIndex + 1, direction)
-
-      //check for number
     }
 
+    //this is shit
     const aboveLeft = hasNumber(lines, i - 1, x - 1, 'left')
     const aboveCenter = !isNaN(lines[i - 1][x]) ? lines[i - 1][x] : ''
     const aboveRight = hasNumber(lines, i - 1, x + 1, 'right')
@@ -100,6 +99,7 @@ const solve = (data) => {
       .filter((variable) => variable != 0)
     return nCount.length === 2 ? nCount[0] * nCount[1] : 0
   }
+
   const result2 = lines.reduce((sum, line, i) => {
     let lineValue = 0
     for (let x = 0; x < line.length; x++) {
